@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="BackgroundBar">#816161</color>
     <color name="BackgroundFrament">#CCB986</color>
+    <color name="BackgroundFramentBichos">#F5E9B9</color>
 </resources>
