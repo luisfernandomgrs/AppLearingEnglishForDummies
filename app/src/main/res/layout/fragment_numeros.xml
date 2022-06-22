@@ -39,6 +39,17 @@
         app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
         app:layout_constraintTop_toTopOf="@+id/guidelineTopOne" />
 
+    <ImageButton
+        android:id="@+id/numberTwo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dois"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopOne" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineTopTwo"
         android:layout_width="wrap_content"
@@ -55,6 +66,17 @@
         android:scaleType="centerCrop"
         android:src="@drawable/tres"
         app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopTwo" />
+
+    <ImageButton
+        android:id="@+id/numberFour"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/quatro"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
         app:layout_constraintTop_toTopOf="@+id/guidelineTopTwo" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -85,28 +107,6 @@
         android:src="@drawable/seis"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
         app:layout_constraintTop_toTopOf="@+id/guidelineTopThree" />
-
-    <ImageButton
-        android:id="@+id/numberTwo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/transparent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/dois"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTopOne" />
-
-    <ImageButton
-        android:id="@+id/numberFour"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/transparent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/quatro"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTopTwo" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomAlign2"
