@@ -7,6 +7,63 @@
     android:background="@drawable/segundo_fundo"
     tools:context=".Fragments.NumerosFragment">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTopOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <ImageButton
+        android:id="@+id/numberOne"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/um"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopOne" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTopTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="170dp" />
+
+    <ImageButton
+        android:id="@+id/numberThree"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tres"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopTwo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTopThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="340dp" />
+
     <ImageButton
         android:id="@+id/numberFive"
         android:layout_width="120dp"
@@ -30,15 +87,15 @@
         app:layout_constraintTop_toTopOf="@+id/guidelineTopThree" />
 
     <ImageButton
-        android:id="@+id/numberThree"
+        android:id="@+id/numberTwo"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:scaleType="centerCrop"
-        android:src="@drawable/tres"
-        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTopTwo" />
+        android:src="@drawable/dois"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopOne" />
 
     <ImageButton
         android:id="@+id/numberFour"
@@ -52,59 +109,19 @@
         app:layout_constraintTop_toTopOf="@+id/guidelineTopTwo" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineEsquerda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.13" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.87" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTopOne"
+        android:id="@+id/guidelineBottomAlign2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_end="16dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTopTwo"
+    <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="170dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTopThree"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="340dp" />
-
-    <ImageButton
-        android:id="@+id/numberOne"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/transparent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/um"
-        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTopOne" />
-
-    <ImageButton
-        android:id="@+id/numberTwo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/transparent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/dois"
+        android:src="@drawable/direitos"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomAlign2"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTopOne" />
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda" />
 </androidx.constraintlayout.widget.ConstraintLayout>

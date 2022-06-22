@@ -1,12 +1,15 @@
 package com.luisf.learning.learningenglishbasic.Fragments;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.luisf.learning.learningenglishbasic.R;
 
@@ -15,7 +18,10 @@ import com.luisf.learning.learningenglishbasic.R;
  * Use the {@link BichosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BichosFragment extends Fragment {
+public class BichosFragment extends Fragment implements View.OnClickListener {
+    private ImageButton imageCao, imageGato, imageLeao, imageMacaco, imageOvelha, imageVaca;
+    private MediaPlayer mediaPlayer;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +67,68 @@ public class BichosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bichos, container, false);
+        View view = inflater.inflate(R.layout.fragment_bichos, container, false);
+
+        imageCao = view.findViewById(R.id.imageCao);
+        imageGato = view.findViewById(R.id.imageGato);
+        imageLeao = view.findViewById(R.id.imageLeao);
+        imageMacaco = view.findViewById(R.id.imageMacaco);
+        imageOvelha = view.findViewById(R.id.imageOvelha);
+        imageVaca = view.findViewById(R.id.imageVaca);
+
+        imageCao.setOnClickListener(this);
+        imageGato.setOnClickListener(this);
+        imageLeao.setOnClickListener(this);
+        imageMacaco.setOnClickListener(this);
+        imageOvelha.setOnClickListener(this);
+        imageVaca.setOnClickListener(this);
+
+        return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        //int idClickedObject = v.getId();
+        //Log.i("Elemento clicado", "Item: " + idClickedObject);
+
+        switch (v.getId()) {
+            case R.id.imageCao:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.dog);
+                this.playSound();
+                break;
+            case R.id.imageGato:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.cat);
+                this.playSound();
+                break;
+            case R.id.imageLeao:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.lion);
+                this.playSound();
+                break;
+            case R.id.imageMacaco:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.monkey);
+                this.playSound();
+                break;
+            case R.id.imageOvelha:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.sheep);
+                this.playSound();
+                break;
+            case R.id.imageVaca:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.cow);
+                this.playSound();
+                break;
+        }
+    }
+
+    private void playSound() {
+        if (mediaPlayer != null) {
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    mediaPlayer.release();
+                }
+            });
+        }
     }
 }

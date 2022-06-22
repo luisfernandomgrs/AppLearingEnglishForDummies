@@ -96,4 +96,20 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/direitos"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottomAlign"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
